@@ -7,21 +7,21 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
          version="4.0">
 
-    <servlet>
-        <servlet-name>signUp</servlet-name>
-        <servlet-class>edu.school21.cinema.servlets.SignUpServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>signUp</servlet-name>
-        <url-pattern>/signUp</url-pattern>
-    </servlet-mapping>
+<!--    <servlet>-->
+<!--        <servlet-name>signUp</servlet-name>-->
+<!--        <servlet-class>edu.school21.cinema.servlets.SignUpServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>signUp</servlet-name>-->
+<!--        <url-pattern>/signUp</url-pattern>-->
+<!--    </servlet-mapping>-->
 
-    <servlet>
-        <servlet-name>signIn</servlet-name>
-        <servlet-class>edu.school21.cinema.servlets.SignInServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>signIn</servlet-name>
-        <url-pattern>/signIn</url-pattern>
-    </servlet-mapping>
+<!--    <servlet>-->
+<!--        <servlet-name>signIn</servlet-name>-->
+<!--        <servlet-class>edu.school21.cinema.servlets.SignInServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>signIn</servlet-name>-->
+<!--        <url-pattern>/signIn</url-pattern>-->
+<!--    </servlet-mapping>-->
 </web-app>
