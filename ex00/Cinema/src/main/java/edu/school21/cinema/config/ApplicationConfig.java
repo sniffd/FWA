@@ -4,7 +4,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @PropertySource("classpath:application.properties")
 public class ApplicationConfig {
-    // datasource
-    //encrypt passwords
-    // data for connection to db in application.properties
+    //TODO datasource
+    //TODO encrypt passwords
+    //TODO  data for connection to db in application.properties
 }
