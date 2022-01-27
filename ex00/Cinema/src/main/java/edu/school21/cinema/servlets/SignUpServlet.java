@@ -24,15 +24,13 @@ public class SignUpServlet extends HttpServlet {
 //    public void init(ServletConfig config) throws ServletException {
 //        ServletContext context = config.getServletContext();
 //        ApplicationContext springContext = (ApplicationContext) context.getAttribute("springContext");
-////        this.usersService = springContext.getBean(UsersService.class);
+//        this.usersService = springContext.getBean(UsersService.class);
 //    }
-
+    //TODO СервлетКонтекст кидает нпе, его нужно сначала настроить
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("jsp/signUp.jsp");
         requestDispatcher.forward(req, resp);
-//        PrintWriter wr = resp.getWriter();
-//        wr.println("hello signup");
     }
 
     @Override
@@ -40,9 +38,6 @@ public class SignUpServlet extends HttpServlet {
 //        String name = req.getParameter("name");
 //        String password = req.getParameter("pass");
 //        User user = new User(name, password);
-//        Model model = Model.getInstance();
-//        model.add(user);
-//
 //        req.setAttribute("userName", name);
         doGet(req, resp);
     }

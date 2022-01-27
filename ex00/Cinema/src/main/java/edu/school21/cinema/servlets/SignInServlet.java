@@ -25,11 +25,9 @@ public class SignInServlet extends HttpServlet {
 //        ApplicationContext springContext = (ApplicationContext) context.getAttribute("springContext");
 //        this.usersService = springContext.getBean(UsersService.class);
 //    }
-
+//TODO СервлетКонтекст кидает нпе, его нужно сначала настроить
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        PrintWriter wr = resp.getWriter();
-//        wr.println("hello signin");
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("jsp/signIn.jsp");
         requestDispatcher.forward(req, resp);
     }
