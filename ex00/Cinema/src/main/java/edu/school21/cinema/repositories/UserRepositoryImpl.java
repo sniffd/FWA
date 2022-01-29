@@ -2,7 +2,7 @@ package edu.school21.cinema.repositories;
 
 import edu.school21.cinema.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -14,9 +14,7 @@ public class UserRepositoryImpl implements UserRepository {
 
     private JdbcTemplate jdbcTemplate;
 
-    @Autowired
-    @Qualifier("dataSource")
-    public void setRepository(DataSource dataSource) {
+    public void setRepository(@Autowired DataSource dataSource) {
         jdbcTemplate = new JdbcTemplate();
         jdbcTemplate.setDataSource(dataSource);
     }
@@ -32,7 +30,7 @@ public class UserRepositoryImpl implements UserRepository {
         try {
             User user = jdbcTemplate.queryForObject("SELECT * FROM users WHERE id = ?", userRowMapper, id);
             return Optional.ofNullable(user);
-        } catch (Exception e) {
+        } catch (DataAccessException e) {
             return Optional.empty();
         }
     }
@@ -64,7 +62,7 @@ public class UserRepositoryImpl implements UserRepository {
         try {
             User user = jdbcTemplate.queryForObject("SELECT * FROM users WHERE email = ?", userRowMapper, email);
             return Optional.ofNullable(user);
-        } catch (Exception e) {
+        } catch (DataAccessException e) {
             return Optional.empty();
         }
     }

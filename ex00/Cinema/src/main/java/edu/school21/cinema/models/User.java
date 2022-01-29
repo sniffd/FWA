@@ -3,6 +3,7 @@ package edu.school21.cinema.models;
 import java.util.Objects;
 
 public class User {
+
     private Long id;
     private String firstname;
     private String lastname;
@@ -11,6 +12,15 @@ public class User {
     private String password;
 
     public User() {
+    }
+
+    public User(String firstname, String lastname, String email, String phone, String password) {
+        this.id = null;
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.email = email;
+        this.phone = phone;
+        this.password = password;
     }
 
     public User(Long id, String firstname, String lastname, String email, String phone, String password) {

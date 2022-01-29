@@ -15,8 +15,9 @@ import java.sql.SQLException;
 
 @Configuration
 @ComponentScan("edu.school21.cinema")
-@PropertySource("classpath:application.properties")
+@PropertySource("classpath:../webapp/WEB-INF/application.properties")
 public class ApplicationConfig {
+
     @Value("${db.url}")
     private String url;
 
@@ -40,12 +41,12 @@ public class ApplicationConfig {
     }
 
     @Bean
-    public PasswordEncoder encodePassword() {
+    public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
     }
 
     @Bean
-    public UserRepositoryImpl usersRepository() throws SQLException, IOException {
+    public UserRepositoryImpl userRepository() throws SQLException, IOException {
         return new UserRepositoryImpl();
     }
 }
