@@ -1,7 +1,10 @@
 package edu.school21.cinema.config;
 
 import com.zaxxer.hikari.HikariDataSource;
+import edu.school21.cinema.repositories.UserRepository;
 import edu.school21.cinema.repositories.UserRepositoryImpl;
+import edu.school21.cinema.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,6 +13,7 @@ import org.springframework.context.annotation.PropertySource;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
+import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -46,8 +50,13 @@ public class ApplicationConfig {
     }
 
     @Bean
-    public UserRepositoryImpl userRepository() throws SQLException, IOException {
-        return new UserRepositoryImpl();
+    public UserRepositoryImpl userRepository(@Autowired DataSource ds) throws SQLException, IOException {
+        return new UserRepositoryImpl(ds);
+    }
+
+    @Bean
+    public UserService userService(@Autowired UserRepository ur, PasswordEncoder pe) throws SQLException, IOException {
+        return new UserService(ur, pe);
     }
 }
 

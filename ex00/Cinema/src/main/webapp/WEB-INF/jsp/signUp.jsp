@@ -9,12 +9,6 @@
 </div>
 
 <div>
-    <%
-//        if (request.getAttribute("userName") != null) {
-//            out.println("<p>User '" + request.getAttribute("userName") + "' added!</p>");
-//        }
-    %>
-
     <div>
         <form method="post">
             <label>Name:

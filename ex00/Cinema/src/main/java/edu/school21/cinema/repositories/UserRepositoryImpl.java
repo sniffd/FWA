@@ -1,7 +1,6 @@
 package edu.school21.cinema.repositories;
 
 import edu.school21.cinema.models.User;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -14,7 +13,7 @@ public class UserRepositoryImpl implements UserRepository {
 
     private JdbcTemplate jdbcTemplate;
 
-    public void setRepository(@Autowired DataSource dataSource) {
+    public UserRepositoryImpl(DataSource dataSource) {
         jdbcTemplate = new JdbcTemplate();
         jdbcTemplate.setDataSource(dataSource);
     }

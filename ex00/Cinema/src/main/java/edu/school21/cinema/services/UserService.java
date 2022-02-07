@@ -2,19 +2,16 @@ package edu.school21.cinema.services;
 
 import edu.school21.cinema.models.User;
 import edu.school21.cinema.repositories.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
-@Service("userService")
 public class UserService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
 
-    private UserService(@Autowired UserRepository userRepository, @Autowired PasswordEncoder passwordEncoder) {
+    public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.passwordEncoder = passwordEncoder;
     }
