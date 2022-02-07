@@ -8,13 +8,13 @@
 <body class="w3-light-grey">
 
 <div class="w3-container w3-center">
-    <h3> Hello! Please register or log in to view the content of the website! </h3>
+    <h3> Hello, %username%! </h3>
 </div>
 
 <div class="w3-container w3-center"> <!-- content -->
     <div class="w3-bar w3-padding-large w3-padding-24"> <!-- buttons -->
-        <button class="w3-btn w3-light-blue w3-round-large" onclick="location.href='/cinema/signUp'">Sign Up</button>
-        <button class="w3-btn w3-green w3-round-large" onclick="location.href='/cinema/signIn'">Sign In</button>
+        <button class="w3-button w3-pale-blue " onclick="location.href='/cinema/signUp'">Sign Up</button>
+        <button class="w3-button w3-cyan" onclick="location.href='/cinema/signIn'">Sign In</button>
     </div>
 </div>
 

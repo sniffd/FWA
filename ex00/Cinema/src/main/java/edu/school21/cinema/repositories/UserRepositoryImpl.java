@@ -11,7 +11,7 @@ import java.util.Optional;
 
 public class UserRepositoryImpl implements UserRepository {
 
-    private JdbcTemplate jdbcTemplate;
+    private final JdbcTemplate jdbcTemplate;
 
     public UserRepositoryImpl(DataSource dataSource) {
         jdbcTemplate = new JdbcTemplate();
