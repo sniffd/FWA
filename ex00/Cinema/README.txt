@@ -1,5 +1,1 @@
-# CREATE DATABASE FOR PROJECT
-
-sudo -u postgres psql  #login
-create database cinema;  #create db
-\q  #exit
+mvn clean install org.codehaus.cargo:cargo-maven2-plugin:run
