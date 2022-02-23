@@ -1,5 +1,6 @@
 package edu.school21.cinema.servlets;
 
+import edu.school21.cinema.models.User;
 import edu.school21.cinema.services.UserService;
 import org.springframework.context.ApplicationContext;
 
@@ -34,9 +35,14 @@ public class SignUpServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        String name = req.getParameter("name");
-//        String password = req.getParameter("pass");
-//        User user = new User(name, password);
+        String firstname = req.getParameter("first");
+        String lastname = req.getParameter("last");
+        String email = req.getParameter("email");
+        String phone = req.getParameter("phone");
+        String password = req.getParameter("password");
+
+        userService.saveUser(firstname, lastname, email, phone, password);
+//
 //        req.setAttribute("userName", name);
         doGet(req, resp);
     }

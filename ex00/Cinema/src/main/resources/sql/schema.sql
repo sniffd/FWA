@@ -6,5 +6,5 @@ CREATE table users
     LASTNAME  VARCHAR(100) not null,
     EMAIL     VARCHAR(100) not null,
     PHONE     VARCHAR(20)  not null,
-    PASSWORD  VARCHAR(50)  not null
+    PASSWORD  VARCHAR(500)  not null
 );

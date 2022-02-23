@@ -1,5 +1,6 @@
 package edu.school21.cinema.servlets;
 
+import edu.school21.cinema.models.User;
 import edu.school21.cinema.services.UserService;
 import org.springframework.context.ApplicationContext;
 
@@ -38,14 +39,17 @@ public class SignInServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        String name = req.getParameter("name");
-//        String password = req.getParameter("pass");
-//        User user = new User(name, password);
-//        Model model = Model.getInstance();
-//        model.add(user);
+//        String firstname = req.getParameter("name");
+//        String lastname = req.getParameter("name");
+//        String email = req.getParameter("name");
+//        String phone = req.getParameter("name");
+//        String password = req.getParameter("name");
 //
-//        req.setAttribute("userName", name);
-        doGet(req, resp);
+////        User user = new User(firstname, lastname, email, phone, password);
+//        userService.saveUser(firstname, lastname, email, phone, password);
+////
+////        req.setAttribute("userName", name);
+//        doGet(req, resp);
     }
 
     public void destroy() {

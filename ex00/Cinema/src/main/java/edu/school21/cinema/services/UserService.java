@@ -22,6 +22,7 @@ public class UserService {
             return false;
         }
         userRepository.save(new User(firstname, lastname, email, phone, passwordEncoder.encode(password)));
+//        userRepository.save(new User(firstname, lastname, email, phone, password));
         return true;
     }
 
