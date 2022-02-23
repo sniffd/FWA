@@ -45,12 +45,14 @@
                 </div>
             </div>
 
-            <button type="submit" class="w3-button w3-block w3-section w3-cyan w3-ripple w3-padding" >Sign Up</button>
+            <button type="submit" class="w3-button w3-block w3-section w3-cyan w3-ripple w3-padding">Sign Up</button>
         </form>
     </div>
 </div>
 <div class="w3-padding" align="center">
-    <button onclick="location.href='/cinema'" class="w3-button w3-pale-blue w3-block w3-section w3-padding" style="width: 30%">Back to main menu</button>
+    <button onclick="location.href='/'" class="w3-button w3-pale-blue w3-block w3-section w3-padding"
+            style="width: 30%">Back to main menu
+    </button>
 </div>
 </body>
 </html>
